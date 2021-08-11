@@ -1,0 +1,133 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: hsl(225, 100%, 94%);
+    font-family: 'Red Hat Display', sans-serif;
+    overflow-x: hidden;
+    position: relative;
+}
+
+a{
+    text-decoration: none;
+    font-size: 14px;
+}
+
+p{
+    color: hsl(224, 23%, 55%);
+}
+
+h1{
+    font-weight: 900;
+    margin-bottom: 0.5em;
+}
+
+h3{
+    font-weight: 700;
+}
+
+.container{
+    background-color:hsl(225, 100%, 98%);
+    width: 29.3%;
+    border-radius: 20px;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 85%;
+    transform: translate(-50%, -50%);
+}
+
+.bg-svg{
+    transform: scaleX(1.3);
+}
+
+.card{
+    padding: 2em 3em;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.check-out{
+    display: block;
+    font-weight: 700;
+    background-color: hsl(245, 75%, 52%);
+    color: hsl(225, 100%, 98%);
+    padding: 1em 3em;
+    margin-bottom: 3em;
+    border-radius: 10px;
+    box-shadow: 0 3px 15px hsl(224, 23%, 55%);
+}
+
+.check-out:hover{
+    background-color: hsl(224, 23%, 55%);
+}
+
+.annual-plan{
+    padding: 1em;
+    margin: 1.5em 0;
+    border-radius: 10px;
+    background-color: hsl(225, 100%, 94%);
+    display: flex;
+    flex: 1 1 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.annual-plan a{
+    margin-left: 4em;
+    text-decoration: underline;
+    color: hsl(245, 75%, 52%);
+    font-weight: 700;
+}
+
+.annual-plan a:hover{
+    color: hsl(224, 23%, 55%);
+    text-decoration: none;
+}
+
+.annual-plan > *{
+    display: inline-block;
+}
+
+.annual-plan .icon{
+    margin-right: 1em;
+}
+
+.cancel{
+    color:hsl(224, 23%, 55%);
+    font-weight: 700;
+}
+
+.cancel:hover{
+    color: hsl(223, 47%, 23%);
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+/*Media Query*/
+@media screen and (min-width: 280px) and (max-width: 500px){
+    .bg-svg{
+        transform: none;
+    }
+
+    .container{
+        width: 90%;
+    }
+
+    .card{
+        padding: 1em 2em;
+        line-height: 1.2;
+    }
+
+    .annual-plan a{
+        margin-left: 2em;
+    }
+}
