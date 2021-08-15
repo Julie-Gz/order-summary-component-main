@@ -5,97 +5,106 @@
 
 body{
     background-color: hsl(225, 100%, 94%);
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='1440' height='437'%3e%3cpath fill='%23D6E1FF' fill-rule='evenodd' d='M0 349.974c218.558 116.035 460.05 116.035 724.475 0s502.933-116.035 715.525 0V0H0v349.974z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: 'Red Hat Display', sans-serif;
-    overflow-x: hidden;
-    position: relative;
-}
-
-a{
-    text-decoration: none;
-    font-size: 14px;
 }
 
 p{
-    color: hsl(224, 23%, 55%);
+    color:hsl(224, 23%, 55%);
+    margin-bottom: 1em;
 }
 
-h1{
+h2{
+    margin-bottom: 1em;
     font-weight: 900;
-    margin-bottom: 0.5em;
-}
-
-h3{
-    font-weight: 700;
 }
 
 .container{
-    background-color:hsl(225, 100%, 98%);
-    width: 29.3%;
-    border-radius: 20px;
-    overflow: hidden;
-    position: absolute;
-    left: 50%;
-    top: 85%;
-    transform: translate(-50%, -50%);
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
-.bg-svg{
-    transform: scaleX(1.3);
+.component{
+    width: 450px;
+    background-color: hsl(225, 100%, 98%);
+    border-radius: 20px;
+    overflow: hidden; 
 }
 
 .card{
-    padding: 2em 3em;
-    text-align: center;
+    padding: 2em 1em;
     line-height: 1.5;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card p{
+    max-width: 30ch;
+}
+
+.annual-plan{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 1em;
+    background-color: hsl(225, 100%, 94%);
+    border-radius: 10px;
+    padding: 0.5em;
+    width: 80%;
+}
+
+.annual-plan .plan{
+    margin-right: 5em;
+    margin-top: 1em;
+}
+
+.plan-selection{
+    color: #000;
+    margin-bottom: 0;
+    font-weight: 700;   
+}
+
+.annual-plan svg{
+    margin-right: 1em;
+}
+
+.annual-plan a{
+    margin-left: 2em;
+    color: hsl(228, 45%, 44%);
+    font-weight: 700;   
+}
+
+.annual-plan a:hover{
+    text-decoration: none;
+    color: hsl(224, 23%, 55%);
 }
 
 .check-out{
-    display: block;
-    font-weight: 700;
+    padding: 1em 6em;
+    border-radius: 7px;
     background-color: hsl(245, 75%, 52%);
-    color: hsl(225, 100%, 98%);
-    padding: 1em 3em;
+    color:hsl(225, 100%, 98%);
+    text-decoration: none;
     margin-bottom: 3em;
-    border-radius: 10px;
-    box-shadow: 0 3px 15px hsl(224, 23%, 55%);
+    font-weight: 700;
+    box-shadow: 0 1px 20px hsl(224, 23%, 55%);
 }
 
 .check-out:hover{
     background-color: hsl(224, 23%, 55%);
 }
 
-.annual-plan{
-    padding: 1em;
-    margin: 1.5em 0;
-    border-radius: 10px;
-    background-color: hsl(225, 100%, 94%);
-    display: flex;
-    flex: 1 1 100%;
-    justify-content: center;
-    align-items: center;
-}
-
-.annual-plan a{
-    margin-left: 4em;
-    text-decoration: underline;
-    color: hsl(245, 75%, 52%);
-    font-weight: 700;
-}
-
-.annual-plan a:hover{
-    color: hsl(224, 23%, 55%);
-    text-decoration: none;
-}
-
-.annual-plan > *{
-    display: inline-block;
-}
-
-.annual-plan .icon{
-    margin-right: 1em;
-}
-
 .cancel{
+    display: block;
+    margin: 2em 0;
+    text-decoration: none;
     color:hsl(224, 23%, 55%);
     font-weight: 700;
 }
@@ -113,21 +122,31 @@ h3{
 }
 
 /*Media Query*/
-@media screen and (min-width: 280px) and (max-width: 500px){
-    .bg-svg{
-        transform: none;
-    }
-
-    .container{
-        width: 90%;
+@media screen and (min-width: 320px) and (max-width: 780px){
+    body{
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='375' height='194'%3e%3cpath fill='%23D6E1FF' fill-rule='evenodd' d='M-131.808 155.366c97.026 51.512 204.233 51.512 321.62 0 117.388-51.512 223.27-51.512 317.648 0V0h-639.268v155.366z'/%3e%3c/svg%3e");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-color:hsl(225, 100%, 94%);
     }
 
     .card{
-        padding: 1em 2em;
-        line-height: 1.2;
+        padding: 1.5em 0.5em;
+    }
+    
+    .card p{
+        max-width: 25ch;
     }
 
     .annual-plan a{
-        margin-left: 2em;
+        margin-left: 0.5em;
+    }
+
+    .check-out{
+        padding: 1em 5em;
+    }
+
+    .annual-plan .plan{
+        margin-right: 3em;
     }
 }
